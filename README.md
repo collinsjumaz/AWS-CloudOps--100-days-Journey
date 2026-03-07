@@ -8,46 +8,39 @@ This repository documents my **100‑day journey** into AWS Cloud Engineering.
 Each day I’ll add new lessons, skills, and practical exercises, creating a public learning log and portfolio.  
 
 ---
-
-## 🚀 Day Logs
-
-### Day 1 – 6th March 2026 – AWS Certified CloudOps Engineer – Associate  
-Kick off with the fundamentals of AWS operations: monitoring, automation, and deployment. This sets the foundation for managing scalable cloud environments.  
-
----
-
-### Day 2 – 7th March 2026 – Cloud Infrastructure Management  
-Cloud infrastructure is the backbone of modern IT. In this lesson, we focus on **infrastructure management** with three key areas:  
-
-- **Provisioning & Automation** – using CloudFormation and Terraform to build repeatable environments  
-- **Monitoring & Logging** – leveraging CloudWatch, CloudTrail, and Config for visibility  
-- **Cost & Performance Optimization** – applying best practices to balance efficiency and spend  
-
-We’ll finish this lesson with a discussion on something I call **The Game of False Alerts**—how to distinguish between real issues and noisy signals in monitoring systems.  
-
-**By the end of the lesson, you will be able to:**  
-- Configure custom monitoring policies and automated alerts  
-- Optimize workloads for cost and performance  
-- Use prioritization tools to target operational responses  
-
----
-
-## 🌐 Key Concepts
-- **Operational Surface** – Any part of a system that requires monitoring and management  
-- **Automation** – Scripts and tools that enforce consistency and efficiency  
-- **Misconfiguration** – Weaknesses in cloud setups that can lead to downtime or security risks  
-
----
-
-## 📖 Goal
-Whether it is CloudOps, DevOps, or Systems Engineering, the goal is to **reduce operational risk and maximize efficiency**. This can only happen with a rock‑solid cloud management program.  
-
----
-
 ## ✍️ Daily Updates
 I will update this README every day with:  
 - New skills learned  
 - Labs completed  
-- Key takeaways  
+- Key takeaways 
 
-Stay tuned for the full 100‑day journey!
+## 🚀 Day Logs
+
+### Day 1 – 6th March 2026 – AWS Certified CloudOps Engineer – Associate  
+Kick off by enrolling to AWS Certified CloudOps Engineer course on linkedin learning .  
+
+
+
+### Day 2 – 8th March 2026 – IAM & AWS Storage/Database Services  
+**Skills Learned:**  
+- Created and managed IAM users, groups, and roles  
+- Applied least privilege principles with custom policies  
+- Understood AWS storage services: EC2 Instance Store, EBS, S3, EFS, FSx, AWS Backup, Storage Gateway  
+- Learned AWS database services: RDS, Aurora, Redshift, DynamoDB, DocumentDB, ElastiCache, Keyspaces, Neptune, Timestream, QLDB  
+
+**Labs/Exercises Completed:**  
+- Configured IAM roles for EC2 instances  
+- Tested cross-account access with resource policies  
+- Explored S3 storage classes and Glacier archiving options  
+- Practiced setting up RDS with Multi-AZ deployment  
+
+**Key Takeaways:**  
+- IAM is the backbone of AWS security—always start with least privilege and scale permissions as needed  
+- AWS storage services provide flexibility across block, object, and file storage, with hybrid options for on-premises integration  
+- AWS database services cover relational, NoSQL, caching, graph, time-series, and ledger use cases, making it possible to choose the right tool for the workload  
+
+**Notes:**  
+- Need to practice more with service-linked roles  
+- Explore deeper into Aurora scaling and DynamoDB partitioning  
+
+
