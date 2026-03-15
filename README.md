@@ -35,3 +35,13 @@ Covered IAM fundamentals, storage services (EBS, S3, etc.), and database service
 [Read full details](daily-logs/day-02.md)  
 
 
+### Day 3 – 14th March 2026 – AWS Networking & Delivery Services  
+Reviewed VPC fundamentals, gateways, endpoints, and traffic delivery services like ELB, Route 53, Global Accelerator, and CloudFront.  
+[Read full details](daily-logs/day-03.md)  
+
+
+### Day 4 – 15th March 2026 – AWS Application Integration & Security Services  
+Learned messaging patterns (SQS/SNS), workflow orchestration (Step Functions), event-driven services (EventBridge), and core security services (WAF, GuardDuty, KMS, Secrets Manager).  
+[Read full details](daily-logs/day-04.md)  
+
+
