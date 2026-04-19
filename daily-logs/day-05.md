@@ -1,121 +1,27 @@
-# AWS Databases - Study Notes
+# Day 05 – April 19, 2026 – AWS Databases
 
-## 1. Amazon RDS Overview
-- **Definition**: Amazon Relational Database Service (RDS) is a managed service for relational databases.
-- **Supported Engines**: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Amazon Aurora.
-- **Key Features**:
-  - Automated backups and snapshots
-  - Easy scaling (vertical and horizontal)
-  - Monitoring via CloudWatch
-  - Security with IAM, VPC, and encryption
-- **Use Cases**: Simplifies database setup, operation, and scaling without manual administration.
+## Skills Learned:
+- Amazon RDS: A managed relational database service supporting MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Aurora with automated backups, easy scaling, CloudWatch monitoring, and security features.
+- RDS Read Replicas: Asynchronous read-only database copies for scaling read-heavy workloads; can improve performance and disaster recovery but are not substitutes for Multi-AZ high availability.
+- RDS Multi-AZ Deployments: High availability through synchronous replication to a standby instance in another AZ with automatic failover and transparent application updates.
+- RDS Events Notification: SNS-integrated alerts for database events (failover, maintenance, backup completion) enabling automated workflows and proactive monitoring.
+- RDS Proxy: Fully managed database proxy offering connection pooling, automatic failover, and IAM authentication to improve scalability for serverless and unpredictable-traffic workloads.
+- Amazon Aurora: Cloud-native relational database (MySQL/PostgreSQL-compatible) with 5x faster performance, auto-scaling storage (up to 128 TB), multi-AZ replication, and global databases for cross-region disaster recovery.
+- Amazon DynamoDB: Fully managed NoSQL database with key-value and document models, single-digit millisecond latency, automatic scaling, global tables, streams for event processing, and flexible capacity modes.
+- DynamoDB Core Components: Tables (data containers), items (records), attributes (fields), primary keys (partition key mandatory, sort key optional), indexes (GSI, LSI), and streams for event-driven architectures.
+- DynamoDB Design Best Practices: Efficient key design for access patterns, GSI usage for flexible queries, and capacity/throughput monitoring and optimization.
 
----
+## Labs/Exercises Completed:
+- N/A (recorded notes and studied AWS database service capabilities).
 
-## 2. Amazon RDS Read Replica
-- **Purpose**: Provides read-only copies of a database for scaling read-heavy workloads.
-- **Characteristics**:
-  - Asynchronous replication from the primary DB
-  - Multiple replicas supported
-  - Can promote a replica to a standalone DB
-- **Benefits**:
-  - Improves performance by offloading read queries
-  - Enhances availability and disaster recovery
-- **Limitations**:
-  - Replication lag possible
-  - Not a substitute for Multi-AZ (which is for high availability)
+## Key Takeaways:
+- RDS is ideal for structured data and ACID compliance; choose Multi-AZ for production workloads requiring high availability and Read Replicas for scaling read-heavy workloads.
+- Aurora provides higher performance and cost-efficiency than standard RDS engines while maintaining MySQL/PostgreSQL compatibility; consider for mission-critical applications.
+- DynamoDB excels at massive scale, low latency access, and flexible schema; use for gaming, IoT, mobile apps, and event-driven architectures requiring global replication.
+- RDS Proxy reduces connection overhead and supports serverless applications; consider for workloads with variable or unpredictable traffic patterns.
+- Relational databases (RDS/Aurora) suit transaction processing; NoSQL (DynamoDB) suits high-throughput, distributed, and flexible-schema scenarios.
+- Layer database resilience with backups, replication, multi-AZ deployments, and Read Replicas based on RPO/RTO requirements.
 
----
-
-## 3. Amazon RDS Multi-AZ Deployments
-- **Definition**: Provides high availability by automatically replicating data to a standby instance in another Availability Zone.
-- **Features**:
-  - Synchronous replication
-  - Automatic failover in case of primary DB failure
-  - Transparent to applications
-- **Benefits**:
-  - Increased fault tolerance
-  - Business continuity during outages
-- **Best Practice**: Use for production workloads requiring high availability.
-
----
-
-## 4. Amazon RDS Events Notification
-- **Purpose**: Provides alerts for database events (e.g., failover, maintenance, backup completion).
-- **Integration**:
-  - Amazon SNS for notifications
-  - Can trigger automated workflows
-- **Examples of Events**:
-  - Instance restart
-  - Backup completion
-  - Failover occurrence
-- **Benefit**: Improves monitoring and proactive response to DB changes.
-
----
-
-## 5. Amazon RDS Proxy
-- **Definition**: A fully managed, highly available database proxy for RDS.
-- **Features**:
-  - Connection pooling
-  - Automatic failover
-  - IAM authentication
-- **Benefits**:
-  - Improves application scalability
-  - Reduces connection overhead
-  - Enhances security with IAM integration
-- **Use Case**: Ideal for serverless applications or workloads with unpredictable traffic.
-
----
-
-## 6. Amazon Aurora Overview
-- **Definition**: A MySQL and PostgreSQL-compatible relational database built for the cloud.
-- **Key Features**:
-  - High performance (up to 5x faster than MySQL)
-  - Auto-scaling storage (up to 128 TB)
-  - Replication across multiple AZs
-  - Global databases for cross-region replication
-- **Benefits**:
-  - Enterprise-grade performance at lower cost
-  - Fault-tolerant and self-healing storage
-- **Use Cases**: Mission-critical applications needing high throughput and resilience.
-
----
-
-## 7. Amazon DynamoDB Overview
-- **Definition**: A fully managed NoSQL database service.
-- **Characteristics**:
-  - Key-value and document data models
-  - Single-digit millisecond latency
-  - Scales automatically
-- **Features**:
-  - Global tables for multi-region replication
-  - Streams for real-time event processing
-  - On-demand and provisioned capacity modes
-- **Use Cases**:
-  - Gaming, IoT, mobile apps
-  - Applications requiring massive scale and low latency
-
----
-
-## 8. Amazon DynamoDB Core Components
-- **Tables**: Primary container for data.
-- **Items**: Individual records in a table.
-- **Attributes**: Data fields within items.
-- **Primary Key**:
-  - Partition key (mandatory)
-  - Sort key (optional, for composite keys)
-- **Indexes**:
-  - Global Secondary Index (GSI)
-  - Local Secondary Index (LSI)
-- **Streams**: Capture changes for event-driven architectures.
-- **Best Practices**:
-  - Design keys for efficient access patterns
-  - Use GSIs for flexible queries
-  - Monitor capacity and optimize throughput
-
----
-
-# Summary
-- **Amazon RDS**: Managed relational DB with features like Read Replicas, Multi-AZ, Proxy, and event notifications.
-- **Amazon Aurora**: High-performance, cloud-native relational DB compatible with MySQL/PostgreSQL.
-- **Amazon DynamoDB**: Fully managed NoSQL DB with scalability, low latency, and flexible data models.
+## Notes:
+- Next: Explore caching strategies with ElastiCache and data warehouse solutions like Amazon Redshift.
+- Consider building a proof-of-concept using Aurora for structured data and DynamoDB for session/profile data in the same application.
