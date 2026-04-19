@@ -45,3 +45,8 @@ Learned messaging patterns (SQS/SNS), workflow orchestration (Step Functions), e
 [Read full details](daily-logs/day-04.md)  
 
 
+### Day 5 – 19th April 2026 – AWS Databases  
+Explored Amazon RDS (managed relational databases with Read Replicas, Multi-AZ, Proxy), Aurora (high-performance cloud-native DB), and DynamoDB (NoSQL with global tables and streams).  
+[Read full details](daily-logs/day-05.md)  
+
+
