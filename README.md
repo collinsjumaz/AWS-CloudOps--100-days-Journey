@@ -50,3 +50,8 @@ Explored Amazon RDS (managed relational databases with Read Replicas, Multi-AZ, 
 [Read full details](daily-logs/day-05.md)  
 
 
+### Day 6 – 20th April 2026 – AWS Monitoring & Management  
+Covered Amazon CloudWatch for monitoring, metrics, alarms, logs, and EventBridge for event-driven workflows, plus AWS Systems Manager for infrastructure management, automation, compliance, and secure access.  
+[Read full details](daily-logs/day-06.md)  
+
+
